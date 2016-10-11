@@ -1,0 +1,16 @@
+ static void Main(string[] args)
+        {
+            double sum = 1, item = 1, x = Convert.ToDouble(Console.ReadLine());
+            double eps = 0.0000001;
+            int k = 1;
+            
+            while(Math.Abs(sum - Math.Cos(x))>eps)
+            {
+                item *= ((-1) * x * x) /( (2 * k)*(2*k-1)); Console.WriteLine("item {0}", item);
+
+                sum += item; Console.WriteLine(sum);
+
+                k++; Console.WriteLine("k={0}",k);
+            }
+            Console.WriteLine("result={0}", sum);
+        }
