@@ -1,0 +1,28 @@
+namespace hw2_part4_task2
+{
+    class Program
+    {
+        public static double cosx(double x)
+        {
+            double y = 1;
+            y = (1 / x) + (x * x) / 4;
+            x = Math.Cos(y);
+            return x;
+        }
+        static void Main(string[] args)
+        {
+            double a = 0.5, b = 2, s = 0, h, x;
+            int n = Convert.ToInt32(Console.ReadLine());
+            h = (b - a) / 2;
+            for (int i = 0; i < n; i++)  
+            {
+                x = a + (i + 1) * h;
+                s += cosx(x);
+
+            }
+            s = s * h; Console.WriteLine("right={0}", s);
+
+
+        }
+    }
+}
