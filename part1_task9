@@ -1,0 +1,21 @@
+namespace hw2_part1_task9
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            double sum = 1, item = 1, x = Convert.ToDouble(Console.ReadLine());
+            double eps = 0.0000000001;
+            int k = 1;
+            while ((sum - Math.Cosh(x)) > eps)
+            {
+                item *= (x*x)/ ((2 * k) * (2 * k - 1));
+                sum += item;
+                k++;
+            }
+            Console.WriteLine("result={0}", sum);
+
+        }
+    }
+}
